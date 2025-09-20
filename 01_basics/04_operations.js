@@ -18,6 +18,6 @@ console.log(l)  //op-- 10
 console.log(3+2)
 console.log(3-2)
 console.log(3*2)
-console.log(10/3)   //quotient with decimal fraction.
+console.log(10/3)   //quotient "with decimal" fraction.
 console.log(3%2)   //remainder
 console.log(3**2)  //exponent
