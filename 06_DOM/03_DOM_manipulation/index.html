@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style = "background-color: #212121; color: #fff">
+    <div class="AllDays">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let WeekDays = document.querySelector(".AllDays");
+    // console.log(WeekDays);
+    // console.log(WeekDays.children);
+    // console.log(WeekDays.children[0]);
+    // console.log(WeekDays.children[0].innerHTML);
+    
+    //accessing and modifying children element :--
+    console.log(WeekDays.firstElementChild);
+    console.log(WeekDays.lastElementChild);
+
+
+    // Vanilla 'for Loop' on HTML Collection :--
+    // for (let i = 0; i < WeekDays.children.length; i++) {
+    //     var element = WeekDays.children[i].innerHTML;
+    //     console.log(element);
+    // }
+
+    //** accessing parent from children :--
+    var dayOne = document.querySelector('.day');
+    // console.log(dayOne.parentElement);
+    
+    console.log("Nodes: ",WeekDays.childNodes);
+    
+</script>
+</html>

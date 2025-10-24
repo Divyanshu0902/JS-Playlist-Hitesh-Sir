@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai Aur Code</title>
+</head>
+<body style = "background-color: #212121; color: #fff">
+</body>
+<script>
+    // **CREATING Element in a document :--
+    const divElement = document.createElement('div');
+    console.log(divElement);
+
+    // **CREATING Attribute like div class :--
+    divElement.className = "divClass";
+    divElement.id="divID";
+    divElement.className = Math.round(Math.random()*10+1);
+    
+    // **setAttribute :--
+    divElement.setAttribute("title", "titleAttribute")
+
+    // **inputting data into elements :--
+    divElement.innerHTML = "Divaynshu knows JS"
+     // This is less preferred coz it has lengthy implementation under the hood. It first brings the HTML element and then overwrites it.
+    
+    //** Better Method :- createTextNode :
+    const addText = document.createTextNode("Chai aur Code")
+
+    // attaching the elements created (in memory) to the viewport :
+    divElement.appendChild(addText)
+    document.body.appendChild(divElement)
+    
+</script>
+</html>

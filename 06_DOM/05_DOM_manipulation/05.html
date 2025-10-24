@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul class="languagesClass">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    // ###. creating a function that will all of creating adding text and appending ### :--
+    function addLanguageFn(langName){
+        const li = document.createElement('li');
+        li.innerText = langName;
+        const ul = document.querySelector('.languagesClass');
+        ul.appendChild(li);
+    }
+    
+    addLanguageFn("Python");
+    addLanguageFn("Mohit");
+    addLanguageFn("Priyanshu");
+
+    //more optimized way :--
+    // by using createTextNode + appendChild instead of innerHTML of li :
+    // function addLangOptimized(langName){
+    //     const li = document.createElement('li');
+    //     li.appendChild(document.createTextNode(langName));
+    //     // const ul = document.querySelector('.languageClass');
+    //     document.querySelector('.languageClass').appendChild(li);
+    // }
+
+    // addLangOptimized("C");
+
+
+    //-----------------------------------------------------------------------------------------------------------------------
+    
+    // ###. EDITING ###:--
+    
+    const secondLi = document.querySelector('li:nth-child(2)');
+    
+    // ##.overwriting existing text Content--
+    // secondLi.textContent = "C+" //or,
+    // secondLi.innerText = "C++" //or,
+    // secondLi.innerHTML = "C+++" 
+    
+    
+    // ##. using outerHTML :--
+    // secondLi.outerHTML = "<li>TypeScript<li>";
+        
+        
+        // ##.replacing with text content from other element :--
+        const newLi = document.createElement('li');
+        newLi.textContent = "Ruby";
+        secondLi.replaceWith(newLi);
+        
+        
+        //-----------------------------------------------------------------------------------------------------------------------
+        
+
+        // ### REMOVING ### :--
+        const lastLi = document.querySelector('li:last-child')
+        lastLi.remove();
+
+</script>
+</html>
